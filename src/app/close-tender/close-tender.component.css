@@ -1,0 +1,25 @@
+.container {
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  .content {
+    background-color: #fefefe;
+
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  .modal{
+    display: flex;
+    gap: 40px;
+  }
+  .mat-mdc-radio-button {
+    margin-left: 16px;
+  }

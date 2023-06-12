@@ -1,0 +1,31 @@
+<div class="container">
+  <h3 mat-dialog-title>Close tender</h3>
+  <div class="content" >
+      <!-- <input type="radio" id="withRFQ" name="tenderType" value="withRFQ" (change)="toggleInputs()">
+      <label for="withoutRFQ">with RFQ</label> -->
+
+      <!-- <input type="radio" id="withoutRFQ" name="tenderType" value="withoutRFQ" (change)="toggleInputs()">
+      <label for="withoutRFQ">Without RFQ</label>  -->
+      <mat-radio-group [(ngModel)]="selectedOption" (ngModelChange)="toggleInputs()">
+        <mat-radio-button id="withRFQ"  value="withRFQ">With RFQ</mat-radio-button>
+        <mat-radio-button id="withoutRFQ"  value="withoutRFQ">Without RFQ</mat-radio-button>
+      </mat-radio-group>
+    <br>
+
+    <ng-container *ngIf="selectedOption === 'withRFQ'">
+      <input type="text" placeholder="Reason" [(ngModel)]="reason" (input)="checkInputFields()">
+    </ng-container>
+    <ng-container *ngIf="selectedOption === 'withoutRFQ'">
+      <input type="text" placeholder="RFQ NO." [(ngModel)]="rfqNo" (input)="checkInputFields()">
+    </ng-container>
+
+    <!-- <input type="text" placeholder="Reason" [(ngModel)]="reason" *ngIf="showReasonInput">
+    <input type="text" placeholder="RFQ NO." [(ngModel)]="rfqNo" *ngIf="showRfqNoInput"> -->
+
+
+  </div>
+
+  <button mat-button (click)="close()" [disabled]=" disableButton" >Close Tender</button>
+
+
+</div>

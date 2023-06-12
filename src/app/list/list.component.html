@@ -1,0 +1,11 @@
+<p>list works!</p>
+<div>
+<input type="text" placeholder="Add task"  #task />
+<button (click)="addTask(task.value)">Addd</button>
+<ul class="list" *ngFor="let item of lists"  [routerLink]="['/detail', item.id]">
+    <li>      <span class="span">{{ item.id }}</span> 
+
+         {{item.name}}</li>
+</ul>
+
+</div>

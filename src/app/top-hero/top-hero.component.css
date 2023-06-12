@@ -1,0 +1,16 @@
+.main{
+    color: darkblue;
+    font-size: 50px;
+}
+.button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.button1{
+    background-color: gray;
+    color: black;
+    min-width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+}
